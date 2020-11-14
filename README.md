@@ -3,6 +3,12 @@
 Vamos a crear una App con 3 actividades para la gestión de una pequeña colección de
 videojuegos.
 
+## Resultado final
+
+![Vease captf1](/pantallazos/captf1.png)
+![Vease captf2](/pantallazos/captf2.png)
+![Vease captf3](/pantallazos/captf3.png)
+
 ## Version 1
 
 ### Ejercicio 1: (30%)
