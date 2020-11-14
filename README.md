@@ -38,7 +38,7 @@ elemento justo debajo del elemento con id textViewSummary
 android:layout_toRightOf="@id/imageView" Esta propiedad sitúa al elemento
 justo a la derecha del elemento con id imageView
 
-![Screenshot](/pantallazos/capt4.png)
+![Screenshot](/pantallazos/capt7.png)
 
 Hay que implementar también la opción de volver a la actividad principal con:
 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -72,7 +72,7 @@ diferentes por ejemplo.
 El layout propio debe mostrar un icono de la plataforma: PC, SWITCH, PS4 y XONE; el
 título, la nota y la fecha de publicación. El diseño del layout es libre.
 
-![Screenshot](/pantallazos/capt5.png)
+![Screenshot](/pantallazos/capt8.png)
 
 Se han añadido la fecha, la puntuaciony los iconos de las plataformas como mipmap (las imagenes de los juegos se han cargado directamente en la carpeta drawable), Para ello
 
@@ -84,7 +84,9 @@ Se han añadido la fecha, la puntuaciony los iconos de las plataformas como mipm
 ### Otras mejoras
 
     * Se ha modificado el Style del AcctionBar
-      + Se han dejado comentado lineas para hacer el texto responsivo, pero en funcion de la version de android (y no quiero cargala)
+      + Se han dejado comentado lineas para hacer el texto responsivo pero van en funcion de la version de android (y no quiero cargala)
+
+![Screenshot](/pantallazos/capt9.png)
 
 ### Dificultades de realizacion
 
