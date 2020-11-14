@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">PMDM Rodriguez Ballester Jose</string>
     <string name="descripcion">DESCRIPCION</string>
+    <string name="game_s">GAME`S</string>
+    <string name="explosion">EXPLOSION</string>
 </resources>

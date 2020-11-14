@@ -115,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, juegosNames);
 
         // Asociar el adapter al listView
-        listViewGameNames.setAdapter(adapter);
+        listViewGameNames.setAdapter(adapter); // Despues es machacado por ejercicio 3 con adaptador personalizado
 
 
         //mi adaptador personalizado
-        Myadapter myadapter = new Myadapter(this, R.layout.item_game, juegos);
+        final Myadapter myadapter = new Myadapter(this, R.layout.item_game, juegos);
 
         // Asociar el adapter al listView
         listViewGameNames.setAdapter(myadapter);
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Creamos el Intent
                 Intent intent = new Intent(MainActivity.this, GameDetails.class);
-
+                //   Intent intent = new Intent(MainActivity.this, Inicial.class);
                 // sin bundle xq pasamos objeto serializable
                 intent.putExtra("JUEGO", juegos.get(position));
 
