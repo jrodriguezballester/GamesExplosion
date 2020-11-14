@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
 public class Myadapter extends BaseAdapter {
@@ -21,7 +22,6 @@ public class Myadapter extends BaseAdapter {
         this.layout = layout;
         this.juegos = juegos;
     }
-
 
     @Override
     public int getCount() {
@@ -43,27 +43,42 @@ public class Myadapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View vista_item=convertView;
-
+       // LayoutInflater layoutInflater=LayoutInflater.from(this.context);
+      //  vista_item=layoutInflater.inflate(R.layout.item_game,null);
         LayoutInflater layoutInflater=LayoutInflater.from(this.context);
-        vista_item=layoutInflater.inflate(R.layout.list_game,null);
+        vista_item=layoutInflater.inflate(R.layout.item_game,null);
+
         //asociar xml a java
         TextView textViewName=vista_item.findViewById(R.id.textViewNameGame);
-        TextView textViewPlataforma1=vista_item.findViewById(R.id.textViewPlataforma1);
-        TextView textViewPlataforma2=vista_item.findViewById(R.id.textViewPlataforma2);
-        TextView textViewPlataforma3=vista_item.findViewById(R.id.textViewPlataforma3);
-        ImageView icono=vista_item.findViewById(R.id.imageViewIco);
+        TextView textViewFecha=vista_item.findViewById(R.id.textViewFecha);
+        TextView textViewPuntuacion=vista_item.findViewById(R.id.textViewPuntuacion);
+        ImageView imageViewGameIcono=vista_item.findViewById(R.id.imageViewIco);
+        ImageView imageView1=vista_item.findViewById(R.id.imageView2);
+        ImageView imageView2=vista_item.findViewById(R.id.imageView3);
+        ImageView imageView3=vista_item.findViewById(R.id.imageView4);
+
+        ImageView[] imageViews=new ImageView[]{imageView1,imageView2,imageView3};
+
+
+
+        //traer valores del juego segun posicion en la lista
         Juego currentGame=juegos.get(position);
-        //traer valores posicion
-        String currentName=currentGame.getName();
+        String currentGameName=currentGame.getName();
         int Icono=currentGame.getIcono();
-        String[]plataformas=currentGame.getPlataforma();
+        int[]plataformas=currentGame.getPlataforma();
+        String currentGameFecha=currentGame.getDate();
+        String currentGamePuntuacion="Puntuacion: "+ currentGame.getPuntuacion();
 
         //Pasar valores a los campos
-        textViewName.setText(currentName);
-        icono.setImageResource(Icono);
-        textViewPlataforma1.setText(plataformas[0]);
-        textViewPlataforma2.setText(plataformas[1]);
-        textViewPlataforma3.setText(plataformas[2]);
+        textViewName.setText(currentGameName);
+        imageViewGameIcono.setImageResource(Icono);
+        for (int i = 0; i < plataformas.length; i++) {
+            imageViews[i].setImageResource(plataformas[i]);
+
+        }
+        textViewFecha.setText(currentGameFecha);
+        textViewPuntuacion.setText(currentGamePuntuacion);
+
         return vista_item;
 
     }

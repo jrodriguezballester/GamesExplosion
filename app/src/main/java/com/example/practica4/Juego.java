@@ -1,32 +1,33 @@
 package com.example.practica4;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 
 public class Juego implements Serializable {
 
     private String name;
-    private String[] plataforma;
+    private int[] plataforma;
     private String descripcion;
     private int icono;
     private int imgPortada;
     private String date;
+    private int puntuacion;
 
 
-
-    public Juego(String name, String[] plataforma, String descripcion, String date, int icono, int imgPortada ) {
+    public Juego(String name, int[] plataforma, String descripcion, String date, int icono, int imgPortada, int puntuacion) {
         this.name = name;
         this.plataforma = plataforma;
         this.descripcion = descripcion;
         this.icono = icono;
         this.imgPortada = imgPortada;
         this.date = date;
+        this.puntuacion = puntuacion;
     }
+
     public String getName() {
         return name;
     }
 
-    public String[] getPlataforma() {
+    public int[] getPlataforma() {
         return plataforma;
     }
 
@@ -44,5 +45,9 @@ public class Juego implements Serializable {
 
     public String getDate() {
         return date;
+    }
+
+    public int getPuntuacion() {
+        return puntuacion;
     }
 }

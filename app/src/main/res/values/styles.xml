@@ -4,7 +4,27 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+
     </style>
 
+    <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/ColorActionBarTitle</item>
+        <!--
+                <item name="android:autoSizeMinTextSize">14sp</item>
+                <item name="android:autoSizeStepGranularity">1sp</item>
+                <item name="android:autoSizeMaxTextSize">28sp</item>
+                <item name="autoSizeTextType">uniform</item>
+         -->
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="titleTextStyle">@style/ActionBarTitleTextStyle</item>
+        <item name="background">@color/ColorPrimary</item>
+    </style>
+
+    <color name="ColorActionBarTitle">#B81DA8</color>
+    <color name="ColorPrimary">#FFF8B632</color>
 </resources>
